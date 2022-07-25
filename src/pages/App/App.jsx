@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import AuthPage from "../AuthPage/AuthPage.jsx";
 import HPBooksPage from "../HPBooksPage/HPBooksPage.jsx";
+import HPHousesPage from "../HPHousesPage/HPHousesPage.jsx";
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
@@ -18,6 +19,7 @@ export default function App() {
         <NavBar user={user} setUser={setUser} />
         <Routes>
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
+          <Route path="/houses" element={<HPHousesPage resource="houses"/>} />
         </Routes>
       </>
        : 
