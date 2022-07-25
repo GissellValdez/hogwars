@@ -11,7 +11,7 @@ export default function NavBar({user}, {setUser}) {
     <nav>
       <Link to="/books">Books</Link>
       &nbsp; | &nbsp;
-      <Link to="/link2">Link 2</Link>
+      <Link to="/houses">Houses</Link>
       &nbsp; | &nbsp;
       <Link to="/" onClick={handleLogOut}>Logout</Link>
       <br />
