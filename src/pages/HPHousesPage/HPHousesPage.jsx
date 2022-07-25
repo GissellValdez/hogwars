@@ -23,12 +23,7 @@ export default function HPResourcePage({resource}){
                 (
                     <HPHouseDataTile resourceData={d} key={idx} />
                 ))}
-                <h1>Hi</h1>
             </div>
         </>
     )
 }
-
-
-
-
