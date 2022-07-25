@@ -1,4 +1,4 @@
-import * as harryPotterService from "../../utilities/harry-potter-service"
+import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
 import HPHouseDataTile from "../../components/HPHouseDataTile/HPHouseDataTile"
 
