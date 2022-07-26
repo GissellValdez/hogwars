@@ -6,8 +6,8 @@ export default function HPHouseDataTile(props){
         <>
             <div>
                 <Link to={`/houses/${props.resourceData.id}`}>
-                <h4>{props.resourceData.name}</h4>
-                <img src={image_url} alt="Not Available"/>
+                    <h4>{props.resourceData.name}</h4>
+                    <img src={image_url} alt="Not Available"/>
                 </Link>
             </div>
         </>
