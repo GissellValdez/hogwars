@@ -23,7 +23,7 @@ export default function App() {
         <Routes>
           <Route path="/characters" element={<HPCharactersPage />} />
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
-          <Route path="/books/:id" element={<HPBookDetailPage resource="books"/>} />
+          <Route path="/books/:id" element={<HPBookDetailPage resource="books/"/>} />
           <Route path="/houses" element={<HPHousesPage resource="houses"/>} />
           <Route path="/species" element={<HPSpeciesPage resource="species"/>} />
         </Routes>
