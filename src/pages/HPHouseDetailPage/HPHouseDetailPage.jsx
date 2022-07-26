@@ -24,7 +24,7 @@ export default function HPHouseDetailPage({resource}){
                 <img src={potterData.image_url} alt="Not Available"/>
             </div>
             <div>
-                <h1>House Name #: {potterData.name}</h1>
+                <h1>House: {potterData.name}</h1>
                 <h3>Founder: {potterData.founder}</h3>
                 <h3>Animal: {potterData.animal}</h3>
                 <h3>Official Colors: {potterData.colors}</h3>
