@@ -1,9 +1,9 @@
-import HPCharacterSearchBar from "../../components/HPCharacterSearchBar/HPCharacterSearchBar"
+import HPCharacterGroupSelector from "../../components/HPCharacterGroupSelector/HPCharacterGroupSelector"
 
 export default function HPCharactersPage(){
     return(
         <>
-            < HPCharacterSearchBar />
+            < HPCharacterGroupSelector />
         </>
     )
 }
