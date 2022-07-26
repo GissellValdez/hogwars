@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import AuthPage from "../AuthPage/AuthPage.jsx";
+import HPCharactersPage from "../HPCharactersPage/HPCharactersPage.jsx";
 import HPBooksPage from "../HPBooksPage/HPBooksPage.jsx";
 import HPHousesPage from "../HPHousesPage/HPHousesPage.jsx";
 import HPSpeciesPage from "../HPSpeciesPage/HPSpeciesPage.jsx";
@@ -19,6 +20,7 @@ export default function App() {
       <>
         <NavBar user={user} setUser={setUser} />
         <Routes>
+          <Route path="/characters" element={<HPCharactersPage />} />
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
           <Route path="/houses" element={<HPHousesPage resource="houses"/>} />
           <Route path="/species" element={<HPSpeciesPage resource="species"/>} />
