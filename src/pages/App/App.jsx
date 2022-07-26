@@ -6,6 +6,7 @@ import HPCharactersPage from "../HPCharactersPage/HPCharactersPage.jsx";
 import HPBooksPage from "../HPBooksPage/HPBooksPage.jsx";
 import HPBookDetailPage from "../HPBookDetailPage/HPBookDetailPage.jsx";
 import HPHousesPage from "../HPHousesPage/HPHousesPage.jsx";
+import HPHouseDetailPage from "../HPHouseDetailPage/HPHouseDetailPage.jsx";
 import HPSpeciesPage from "../HPSpeciesPage/HPSpeciesPage.jsx";
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
           <Route path="/books/:id" element={<HPBookDetailPage resource="books/"/>} />
           <Route path="/houses" element={<HPHousesPage resource="houses"/>} />
+          <Route path="/houses/:id" element={<HPHouseDetailPage resource="houses/"/>} />
           <Route path="/species" element={<HPSpeciesPage resource="species"/>} />
         </Routes>
       </>
