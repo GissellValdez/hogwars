@@ -21,7 +21,7 @@ export default function HPBookDetailPage({resource}){
     return(
         <>
             <div>
-                <img src={potterData.image_url}/>
+                <img src={potterData.image_url} alt="Not Available"/>
             </div>
             <div>
                 <h1>Book #: {potterData.id}</h1>
