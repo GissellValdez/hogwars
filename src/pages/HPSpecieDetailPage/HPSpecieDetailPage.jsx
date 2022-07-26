@@ -27,8 +27,9 @@ export default function HPSpecieDetailPage({resource}){
                 <h3>Eyes: {potterData.eyes}</h3>
                 <h3>Hair: {potterData.hair}</h3>
                 <h3>height: {potterData.height}</h3>
-                <h3>Distinctions: {potterData.distinctions.content}</h3>
-                <h3>Relates Species: {potterData.related_species.name}</h3>
+                {/* // do another map for these 2
+                <h3>Distinctions: {potterData.distinctions}</h3>
+                <h3>Relates Species: {potterData.related_species}</h3> */}
             </div>
         </>
     )
