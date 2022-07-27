@@ -9,4 +9,5 @@ const playableCharacterSchema = new Schema({
 	house: { type: String, required: true },
 	playerImg: { type: String, required: true },
 	opponentImg: { type: String, required: true },
+    spells: [{ type: Schema.Types.ObjectId, ref: 'Spell' }]
 })
