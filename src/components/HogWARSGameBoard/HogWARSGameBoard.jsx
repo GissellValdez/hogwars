@@ -1,6 +1,8 @@
 // game board component rendered by the HogWARSGamePage
 
 import { Component } from 'react'
+import HogWARSPlayerAvatar from '../HogWARSPlayerAvatar/HogWARSPlayerAvatar'
+
 export default class HogWARSGameBoard extends Component {
     state = {
         player1: {
@@ -24,7 +26,10 @@ export default class HogWARSGameBoard extends Component {
 
     render(){
         return(
-        <h1>Game Board</h1>
+            <>
+                <h1>Game Board</h1>
+                <HogWARSPlayerAvatar />
+            </>
         )
     }
 }
