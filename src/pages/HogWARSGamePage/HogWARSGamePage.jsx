@@ -1,7 +1,7 @@
 // page file for the HogWARS game
-
-export default function HogWARSGamePage(){
-    const state = {
+import { Component } from 'react'
+export default class HogWARSGamePage extends Component {
+    state = {
         player1: {
             name: 'Harry Potter',
             house: 'Gryffindor',
@@ -21,7 +21,9 @@ export default function HogWARSGamePage(){
         gameOver: false
     }
 
-    return(
+    render(){
+        return(
         <h1>Hi</h1>
-    )
+        )
+    }
 }
