@@ -28,7 +28,7 @@ export default class HogWARSGameBoard extends Component {
         return(
             <>
                 <h1>Game Board</h1>
-                <HogWARSPlayerAvatar />
+                <HogWARSPlayerAvatar playerAvatar={this.state.player1} />
             </>
         )
     }
