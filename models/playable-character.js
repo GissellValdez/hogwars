@@ -1,6 +1,5 @@
 // model to use for playable characters
 
-// models/user.js
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -11,3 +10,5 @@ const playableCharacterSchema = new Schema({
 	opponentImg: { type: String, required: true },
     spells: [{ type: Schema.Types.ObjectId, ref: 'Spell' }]
 })
+
+module.exports = mongoose.model('PlayableCharacter', playableCharacterSchema);
