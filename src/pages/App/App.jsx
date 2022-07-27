@@ -9,6 +9,7 @@ import HPHousesPage from "../HPHousesPage/HPHousesPage.jsx";
 import HPHouseDetailPage from "../HPHouseDetailPage/HPHouseDetailPage.jsx";
 import HPSpeciesPage from "../HPSpeciesPage/HPSpeciesPage.jsx";
 import HPSpecieDetailPage from "../HPSpecieDetailPage/HPSpecieDetailPage.jsx";
+import HPWandsPage from "../HPWandsPage/HPWandsPage.jsx";
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/houses/:id" element={<HPHouseDetailPage resource="houses/"/>} />
           <Route path="/species" element={<HPSpeciesPage resource="species"/>} />
           <Route path="/species/:id" element={<HPSpecieDetailPage resource="species/"/>} />
+          <Route path="/wands" element={<HPWandsPage resource="wands"/>} />
         </Routes>
       </>
        : 
