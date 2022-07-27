@@ -17,6 +17,8 @@ export default function NavBar({user}, {setUser}) {
       &nbsp; | &nbsp;
       <Link to="/species">Species</Link>
       &nbsp; | &nbsp;
+      <Link to="/wands">Wands</Link>
+      &nbsp; | &nbsp;
       <Link to="/hogwars">HogWARS</Link>
       &nbsp; | &nbsp;
       <Link to="/" onClick={handleLogOut}>Logout</Link>
