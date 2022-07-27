@@ -11,6 +11,7 @@ import HPSpeciesPage from "../HPSpeciesPage/HPSpeciesPage.jsx";
 import HPSpecieDetailPage from "../HPSpecieDetailPage/HPSpecieDetailPage.jsx";
 import HPWandsPage from "../HPWandsPage/HPWandsPage.jsx";
 import HPWandDetailPage from "../HPWandDetailPage/HPWandDetailPage.jsx";
+import HogWARSGamePage from "../HogWARSGamePage/HogWARSGamePage.jsx";
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/species/:id" element={<HPSpecieDetailPage resource="species/"/>} />
           <Route path="/wands" element={<HPWandsPage resource="wands"/>} />
           <Route path="/wands/:id" element={<HPWandDetailPage resource="wands/"/>} />
+          <Route path="/hogwars" element={<HogWARSGamePage />} />
         </Routes>
       </>
        : 
