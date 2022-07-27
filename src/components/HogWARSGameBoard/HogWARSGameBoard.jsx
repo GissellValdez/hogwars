@@ -24,7 +24,7 @@ export default class HogWARSGameBoard extends Component {
 
     render(){
         return(
-        <h1>Hi</h1>
+        <h1>Game Board</h1>
         )
     }
 }
