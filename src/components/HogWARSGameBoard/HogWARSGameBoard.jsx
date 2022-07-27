@@ -1,0 +1,1 @@
+// game board component rendered by the HogWARSGamePage
