@@ -17,7 +17,7 @@ export default class HogWARSGameBoard extends Component {
             name: 'Lord Voldemort',
             house: 'Slytherin',
             playerImg: 'hhttps://i.ibb.co/G9JG5rb/Lord-Voldemort-Harry-Potter-Official-cardboard-cutout-buy-now-at-starstills-74553.jpg',
-            opponentImg: 'hhttps://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
+            opponentImg: 'https://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
             hp: 500,
         },
         playerFaint: false,
@@ -30,7 +30,7 @@ export default class HogWARSGameBoard extends Component {
             <>
                 <h1>Game Board</h1>
                 <HogWARSPlayerBox player={this.state.player1} />
-                <HogWARSOpponentBox opponent={this.state.opponent} />
+                <HogWARSOpponentBox opponent={this.state.player2} />
             </>
         )
     }
