@@ -10,14 +10,14 @@ export default class HogWARSGameBoard extends Component {
             house: 'Gryffindor',
             playerImg: 'https://i.ibb.co/MVTfHsm/harryplayerimg.jpg',
             opponentImg: 'https://i.ibb.co/bvVDzGW/harryoppimg.png',
-            hp: 500
+            hp: 500,
         },
         player2: {
             name: 'Lord Voldemort',
             house: 'Slytherin',
             playerImg: 'hhttps://i.ibb.co/G9JG5rb/Lord-Voldemort-Harry-Potter-Official-cardboard-cutout-buy-now-at-starstills-74553.jpg',
             opponentImg: 'hhttps://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
-            hp: 500
+            hp: 500,
         },
         playerFaint: false,
         opponentFaint: false,
