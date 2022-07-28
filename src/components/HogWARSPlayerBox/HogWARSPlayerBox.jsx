@@ -1,0 +1,1 @@
+// HogWARSPlayerBox component that will have player components (avatar and healthbox)
