@@ -12,6 +12,12 @@ export default class HogWARSGameBoard extends Component {
             playerImg: 'https://i.ibb.co/MVTfHsm/harryplayerimg.jpg',
             opponentImg: 'https://i.ibb.co/bvVDzGW/harryoppimg.png',
             hp: 500,
+            spells: {
+                spellOne: { name:'Expecto Patronum', damage: 50 },
+                spellTwo: { name:'Expelliarmus', damage: 30 },
+                spellThree: { name:'Sectumsempra', damage: 75 },
+                spellFour: { name:'Stupify', damage: 45 },
+            }
         },
         player2: {
             name: 'Lord Voldemort',
@@ -19,6 +25,12 @@ export default class HogWARSGameBoard extends Component {
             playerImg: 'hhttps://i.ibb.co/G9JG5rb/Lord-Voldemort-Harry-Potter-Official-cardboard-cutout-buy-now-at-starstills-74553.jpg',
             opponentImg: 'https://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
             hp: 500,
+            spells: {
+                spellOne: { name:'Cruciatus Curse', damage: 75 },
+                spellTwo: { name:'Imperius Curse', damage: 50 },
+                spellThree: { name:'Avada Kedavra', damage: 1000 },
+                spellFour: null,
+            }
         },
         playerFaint: false,
         opponentFaint: false,
