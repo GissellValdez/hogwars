@@ -2,6 +2,7 @@
 
 import { Component } from 'react'
 import HogWARSPlayerBox from '../HogWARSPlayerBox/HogWARSPlayerBox'
+import HogWARSSpellsBox from '../HogWARSSpellsBox/HogWARSSpellsBox'
 import HogWARSOpponentBox from '../HogWARSOpponentBox/HogWARSOpponentBox'
 
 export default class HogWARSGameBoard extends Component {
@@ -42,6 +43,7 @@ export default class HogWARSGameBoard extends Component {
             <>
                 <h1>Game Board</h1>
                 <HogWARSPlayerBox player={this.state.player1} />
+                <HogWARSSpellsBox spells={this.state.player1.spells} />
                 <HogWARSOpponentBox opponent={this.state.player2} />
             </>
         )
