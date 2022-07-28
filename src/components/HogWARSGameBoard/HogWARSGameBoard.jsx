@@ -2,6 +2,7 @@
 
 import { Component } from 'react'
 import HogWARSPlayerAvatar from '../HogWARSPlayerAvatar/HogWARSPlayerAvatar'
+import HogWARSPlayerHealthBox from '../HogWARSPlayerHealthBox/HogWARSPlayerHealthBox'
 
 export default class HogWARSGameBoard extends Component {
     state = {
@@ -29,6 +30,7 @@ export default class HogWARSGameBoard extends Component {
             <>
                 <h1>Game Board</h1>
                 <HogWARSPlayerAvatar playerAvatar={this.state.player1} />
+                <HogWARSPlayerHealthBox playerAvatar={this.state.player1} />
             </>
         )
     }
