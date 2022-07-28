@@ -1,7 +1,7 @@
 // HogWARSSpellBox - component that will display the playable character's spells for player to click and attach the opponent
 
 import { Component } from 'react'
-import Spell from '../HogWARSSpell/HogWARSSpell'
+import HogWARSSpell from '../HogWARSSpell/HogWARSSpell'
 
 export default class HogWARSSpellsBox extends Component {
     render(){
@@ -11,10 +11,11 @@ export default class HogWARSSpellsBox extends Component {
                 {
                     Object.keys(this.props.spells).map((key, index) => {
                         return (
-                            <Spell
+                            <HogWARSSpell
                                 key={key}
                                 index={index}
-                                details={this.props.spells[key]}
+                                spellName={this.props.spells[key].name}
+                                spellDamage={this.props.spells[key].damage}
                             />
                         )
                     })
