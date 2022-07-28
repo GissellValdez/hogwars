@@ -6,8 +6,8 @@ export default class HogWARSPlayerHealthBox extends Component {
     render(){
         return(
             <>
-                <h2>{this.props.playerAvatar.name}</h2>
-                <h3>HP: {this.props.playerAvatar.hp}</h3>
+                <h2>{this.props.playerHealth.name}</h2>
+                <h3>HP: {this.props.playerHealth.hp}</h3>
             </>
         )
     }
