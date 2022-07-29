@@ -42,16 +42,40 @@ export default class HogWARSGameBoard extends Component {
     }
 
     componentDidMount(){
-        this.gameStart()
+        this.gameTextStart()
     }
 
-    gameStart() {
-        this.setState(() => {
+    componentDidUpdate(){}
+
+    gameTextStart() {
+        setTimeout(() => {
+        this.setState(
+            () => {
             return {
-                textMessage: `${this.player1.name} will duel ${this.player2.name}`
+                textMessage: `${this.state.player2.name} has arrived to duel ${this.state.player1.name}`,
+                enemyDead: false
+            };
+            },
+            () => {
+            setTimeout(() => {
+                this.setState(
+                {
+                    textMessage: `Both ${this.state.player2.name} and ${this.state.player1.name} have both bowed...`,
+                    playerDead: false
+                },
+                () => {
+                    setTimeout(() => {
+                    this.setState({
+                        textMessage: "Please choose a spell to attack with..."
+                    });
+                    }, 3000);
+                }
+                );
+            }, 3000);
             }
-        })
-    }
+        );
+        }, 1000);
+    };
 
 
 
@@ -64,7 +88,7 @@ export default class HogWARSGameBoard extends Component {
                 <HogWARSOpponentBox opponent={this.state.player2} />
                 <HogWARSPlayerBox player={this.state.player1} />
                 <HogWARSSpellsBox spells={this.state.player1.spells} />
-                <HogWARSTextBox gameText="Test game text" />
+                <HogWARSTextBox gameText={this.state.textMessage} />
             </>
         )
     }
