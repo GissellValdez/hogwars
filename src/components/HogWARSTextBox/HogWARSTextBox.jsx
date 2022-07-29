@@ -5,9 +5,13 @@ import { Component } from 'react'
 export default class HogWARSTextBox extends Component {
     render(){
         return(
-            <p>
-                {this.props.gameText}
-            </p>
+            <>
+                <div className='text-box'>
+                    <p>
+                        {this.props.gameText}
+                    </p>
+                </div>
+            </>
         )
     }
 }
