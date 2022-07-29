@@ -2,9 +2,9 @@
 
 import { Component } from 'react'
 import './HogWARSGameBoard.css'
-import HogWARSPlayerBox from '../HogWARSPlayerBox/HogWARSPlayerBox'
-import HogWARSSpellsBox from '../HogWARSSpellsBox/HogWARSSpellsBox'
-import HogWARSOpponentBox from '../HogWARSOpponentBox/HogWARSOpponentBox'
+import HogWARSPlayerBox from '../../HogWARSComponents/HogWARSPlayerBox/HogWARSPlayerBox'
+import HogWARSSpellsBox from '../../HogWARSComponents/HogWARSSpellsBox/HogWARSSpellsBox'
+import HogWARSOpponentBox from '../../HogWARSComponents/HogWARSOpponentBox/HogWARSOpponentBox'
 import HogWARSTextBox from '../HogWARSTextBox/HogWARSTextBox'
 
 export default class HogWARSGameBoard extends Component {
