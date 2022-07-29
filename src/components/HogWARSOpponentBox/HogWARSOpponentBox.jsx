@@ -9,8 +9,8 @@ export default class HogWARSOpponentBox extends Component{
         return(
             <>
                 <div className='opponentBox'>
-                    <HogWARSOpponentAvatar opponentAvatar={this.props.opponent} />
                     <HogWARSOpponentHealthBox opponentHealth={this.props.opponent} />
+                    <HogWARSOpponentAvatar opponentAvatar={this.props.opponent} />
                 </div>
             </>
         )
