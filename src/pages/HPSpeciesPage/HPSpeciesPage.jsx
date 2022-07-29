@@ -1,6 +1,6 @@
 import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
-import HPSpellDataTile from "../../components/HPSpecieDataTile/HPSpecieDataTile"
+import HPSpellDataTile from "../../components/HPDataComponents/HPSpecieDataTile/HPSpecieDataTile"
 
 export default function HPResourcePage({resource}){
     const [potterDataList, setResourceData] = useState([])

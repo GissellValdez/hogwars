@@ -1,6 +1,6 @@
 import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
-import HPWandDataTile from "../../components/HPWandDataTile/HPWandDataTile"
+import HPWandDataTile from "../../components/HPDataComponents/HPWandDataTile/HPWandDataTile"
 
 export default function HPWandsPage({resource}){
     const [potterDataList, setPotterDataList] = useState([])

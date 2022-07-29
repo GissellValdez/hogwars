@@ -1,6 +1,6 @@
 import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
-import HPBookDataTile from "../../components/HPBookDataTile/HPBookDataTile"
+import HPBookDataTile from "../../components/HPDataComponents/HPBookDataTile/HPBookDataTile"
 
 export default function HPBooksPage({resource}){
     const [potterDataList, setResourceData] = useState([])

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import HPCharacterList from "../HPCharacterList/HPCharacterList"
-import * as potterCharacterAPI from "../../utilities/harry-potter-characters/harry-potter-characters-service"
+import * as potterCharacterAPI from "../../../utilities/harry-potter-characters/harry-potter-characters-service"
 
 export default function HPCharacterSearchBar(){
     const [potterCharacters, setPotterCharacters] = useState([])
