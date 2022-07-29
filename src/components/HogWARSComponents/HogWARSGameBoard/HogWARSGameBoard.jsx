@@ -2,9 +2,9 @@
 
 import { Component } from 'react'
 import './HogWARSGameBoard.css'
-import HogWARSPlayerBox from '../../HogWARSComponents/HogWARSPlayerBox/HogWARSPlayerBox'
-import HogWARSSpellsBox from '../../HogWARSComponents/HogWARSSpellsBox/HogWARSSpellsBox'
-import HogWARSOpponentBox from '../../HogWARSComponents/HogWARSOpponentBox/HogWARSOpponentBox'
+import HogWARSPlayerBox from '../HogWARSPlayerBox/HogWARSPlayerBox'
+import HogWARSSpellsBox from '../HogWARSSpellsBox/HogWARSSpellsBox'
+import HogWARSOpponentBox from '../HogWARSOpponentBox/HogWARSOpponentBox'
 import HogWARSTextBox from '../HogWARSTextBox/HogWARSTextBox'
 
 export default class HogWARSGameBoard extends Component {
@@ -35,10 +35,27 @@ export default class HogWARSGameBoard extends Component {
                 spellFour: null,
             }
         },
-        playerFaint: false,
-        opponentFaint: false,
-        gameOver: false
+        playerDead: false,
+        opponent: false,
+        gameOver: false,
+        textMessage: ""
     }
+
+    componentDidMount(){
+        this.gameStart()
+    }
+
+    gameStart() {
+        this.setState(() => {
+            return {
+                textMessage: `${this.player1.name} will duel ${this.player2.name}`
+            }
+        })
+    }
+
+
+
+
 
     render(){
         return(
