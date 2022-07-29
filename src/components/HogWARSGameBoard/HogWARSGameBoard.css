@@ -20,3 +20,8 @@ text-align: center;
     inline-size: 300px;
     margin-left: 400px;
 }
+.playerBox {
+    inline-size:0;
+    position:relative;
+    left: 0px;
+}

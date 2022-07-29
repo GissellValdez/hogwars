@@ -8,9 +8,10 @@ export default class HogWARSPlayerBox extends Component{
     render(){
         return(
             <>
-                <h1>Game Board</h1>
-                <HogWARSPlayerAvatar playerAvatar={this.props.player} />
-                <HogWARSPlayerHealthBox playerHealth={this.props.player} />
+                <div className='playerBox'>
+                    <HogWARSPlayerAvatar playerAvatar={this.props.player} />
+                    <HogWARSPlayerHealthBox playerHealth={this.props.player} />
+                </div>
             </>
         )
     }
