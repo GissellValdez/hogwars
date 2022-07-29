@@ -1,6 +1,7 @@
 // game board component rendered by the HogWARSGamePage
 
 import { Component } from 'react'
+import './HogWARSGameBoard.css'
 import HogWARSPlayerBox from '../HogWARSPlayerBox/HogWARSPlayerBox'
 import HogWARSSpellsBox from '../HogWARSSpellsBox/HogWARSSpellsBox'
 import HogWARSOpponentBox from '../HogWARSOpponentBox/HogWARSOpponentBox'
