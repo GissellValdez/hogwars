@@ -1,1 +1,7 @@
 /* CSS file for HogWARS game board */
+.spellcontainer {
+    margin: left;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
