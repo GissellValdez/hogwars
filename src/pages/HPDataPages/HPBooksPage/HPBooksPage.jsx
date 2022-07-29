@@ -1,8 +1,8 @@
-import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
+import * as harryPotterService from "../../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
-import HPSpellDataTile from "../../components/HPDataComponents/HPSpecieDataTile/HPSpecieDataTile"
+import HPBookDataTile from "../../../components/HPDataComponents/HPBookDataTile/HPBookDataTile"
 
-export default function HPResourcePage({resource}){
+export default function HPBooksPage({resource}){
     const [potterDataList, setResourceData] = useState([])
 
     async function getHarryPotterResourceData(resource){
@@ -21,7 +21,7 @@ export default function HPResourcePage({resource}){
             <div>
                 {potterDataList?.map((d, idx) =>
                 (
-                    <HPSpellDataTile resourceData={d} key={idx} />
+                    <HPBookDataTile resourceData={d} key={idx} />
                 ))}
             </div>
         </>

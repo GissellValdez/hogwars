@@ -1,8 +1,8 @@
-import * as harryPotterService from "../../utilities/harry-potter-other-info/harry-potter-other-info-service"
+import * as harryPotterService from "../../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 
-export default function HPWandDetailPage({resource}){
+export default function HPSpecieDetailPage({resource}){
     const [potterData, setPotterData] = useState([])
     const { id } = useParams();
     
@@ -21,16 +21,15 @@ export default function HPWandDetailPage({resource}){
     return(
         <>
             <div>
-                <img src={potterData.image_url} alt="Not Available"/>
-            </div>
-            <div>
                 <h1>Name: {potterData.name}</h1>
-                <h3>Manufacturer: {potterData.manufacturer}</h3>
-                <h3>Made: {potterData.made}</h3>
-                <h3>Wood: {potterData.wood}</h3>
-                <h3>Core: {potterData.core}</h3>
-                <h3>Length: {potterData.length}</h3>
-                <h3>Characteristics: {potterData.characteristics}</h3>
+                <h3>Main Location: {potterData.native}</h3>
+                <h3>Mortality: {potterData.mortality}</h3>
+                <h3>Eyes: {potterData.eyes}</h3>
+                <h3>Hair: {potterData.hair}</h3>
+                <h3>height: {potterData.height}</h3>
+                {/* // do another map for these 2
+                <h3>Distinctions: {potterData.distinctions}</h3>
+                <h3>Relates Species: {potterData.related_species}</h3> */}
             </div>
         </>
     )
