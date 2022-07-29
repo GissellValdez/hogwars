@@ -44,9 +44,9 @@ export default class HogWARSGameBoard extends Component {
         return(
             <>
                 <h1>Game Board</h1>
+                <HogWARSOpponentBox opponent={this.state.player2} />
                 <HogWARSPlayerBox player={this.state.player1} />
                 <HogWARSSpellsBox spells={this.state.player1.spells} />
-                <HogWARSOpponentBox opponent={this.state.player2} />
                 <HogWARSTextBox gameText="Test game text" />
             </>
         )
