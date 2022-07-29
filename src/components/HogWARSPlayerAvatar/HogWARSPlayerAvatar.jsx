@@ -6,8 +6,10 @@ export default class HogWARSPlayerAvatar extends Component {
     render(){
         return(
             <>
-                <h2>PlayableCharacter</h2>
-                <img src={this.props.playerAvatar.playerImg} alt="Not Available" />
+                <div className="avatar">
+                    <img src={this.props.playerAvatar.playerImg} alt="Not Available" width="350" 
+     height="400"/>
+                </div>
             </>
         )
     }

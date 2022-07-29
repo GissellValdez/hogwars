@@ -4,3 +4,7 @@ width:30%;
 height:40px;
 text-align: center;
 }
+.avatar {
+    width:500px;
+    height: 300px;
+}
