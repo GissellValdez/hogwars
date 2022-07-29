@@ -6,5 +6,17 @@ text-align: center;
 }
 .avatar {
     width:500px;
-    height: 300px;
+    height: 280px;
+    inline-size: 150px;
+}
+.playerHealthBox {
+    background-color: white;
+    width: -75%;
+    height: auto;
+    border: 5px solid green;
+    border-radius: 14px 0px 14px 0px;
+    padding: 5x;
+    letter-spacing: -1px;
+    inline-size: 300px;
+    margin-left: 400px;
 }
