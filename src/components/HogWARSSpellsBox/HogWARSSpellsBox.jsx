@@ -8,18 +8,20 @@ export default class HogWARSSpellsBox extends Component {
         return(
             <>
                 <h5>Spell Box</h5>
-                {
-                    Object.keys(this.props.spells).map((key, index) => {
-                        return (
-                            <HogWARSSpell
-                                key={key}
-                                index={index}
-                                spellName={this.props.spells[key].name}
-                                spellDamage={this.props.spells[key].damage}
-                            />
-                        )
-                    })
-                }
+                <div className='spellcontainer'>
+                    {
+                        Object.keys(this.props.spells).map((key, index) => {
+                            return (
+                                <HogWARSSpell
+                                    key={key}
+                                    index={index}
+                                    spellName={this.props.spells[key].name}
+                                    spellDamage={this.props.spells[key].damage}
+                                />
+                            )
+                        })
+                    }
+                </div>
             </>
         )
     }
