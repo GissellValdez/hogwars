@@ -6,8 +6,9 @@ export default class HogWARSOpponentAvatar extends Component {
     render(){
         return(
             <>
-                <h2>Opponent Character</h2>
-                <img src={this.props.opponentAvatar.opponentImg} alt="Not Available" />
+                <div className="opponentAvatar">
+                    <img src={this.props.opponentAvatar.opponentImg} alt="Not Available" />
+                </div>
             </>
         )
     }
