@@ -77,9 +77,18 @@ export default class HogWARSGameBoard extends Component {
         }, 1000);
     };
 
+    handleSpellClick = (spellName, damage) => {
+        damage = damage + Math.floor(Math.random() * 11);
 
-
-
+        // use attack to calculate enemy HP and adjust progress bar
+        this.setState(
+            () => {
+                return {
+                    textMessage: `${spellName} has done ${damage} damage!`
+                }
+            }
+        );
+    };
 
     render(){
         return(
@@ -87,7 +96,7 @@ export default class HogWARSGameBoard extends Component {
                 <h1>Game Board</h1>
                 <HogWARSOpponentBox opponent={this.state.player2} />
                 <HogWARSPlayerBox player={this.state.player1} />
-                <HogWARSSpellsBox spells={this.state.player1.spells} />
+                <HogWARSSpellsBox spells={this.state.player1.spells} handleSpellClick={this.handleSpellClick}/>
                 <HogWARSTextBox gameText={this.state.textMessage} />
             </>
         )
