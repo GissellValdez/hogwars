@@ -1,6 +1,6 @@
 // game board component rendered by the HogWARSGamePage
 
-import { Component } from 'react'
+import React, { Component } from 'react'
 import './HogWARSGameBoard.css'
 import HogWARSPlayerBox from '../HogWARSPlayerBox/HogWARSPlayerBox'
 import HogWARSSpellsBox from '../HogWARSSpellsBox/HogWARSSpellsBox'
@@ -14,7 +14,8 @@ export default class HogWARSGameBoard extends Component {
             house: 'Gryffindor',
             playerImg: 'https://i.ibb.co/MVTfHsm/harryplayerimg.jpg',
             opponentImg: 'https://i.ibb.co/bvVDzGW/harryoppimg.png',
-            hp: 500,
+            currentHP: 500,
+            maxHP: 500,
             spells: {
                 spellOne: { name:'Expecto Patronum', damage: 50 },
                 spellTwo: { name:'Expelliarmus', damage: 30 },
@@ -27,7 +28,8 @@ export default class HogWARSGameBoard extends Component {
             house: 'Slytherin',
             playerImg: 'hhttps://i.ibb.co/G9JG5rb/Lord-Voldemort-Harry-Potter-Official-cardboard-cutout-buy-now-at-starstills-74553.jpg',
             opponentImg: 'https://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
-            hp: 500,
+            currentHP: 500,
+            maxHP: 500,
             spells: {
                 spellOne: { name:'Cruciatus Curse', damage: 75 },
                 spellTwo: { name:'Imperius Curse', damage: 50 },
@@ -79,16 +81,24 @@ export default class HogWARSGameBoard extends Component {
 
     handleSpellClick = (spellName, damage) => {
         damage = damage + Math.floor(Math.random() * 11);
-
         // use attack to calculate enemy HP and adjust progress bar
+        
+        // this gets the current hp and reduces it by damage, to be set later in setState
+        var playerCurrentHP = {...this.state}
+        console.log(playerCurrentHP)
+        playerCurrentHP.player2.currentHP -= damage;
+        // console.log(playerCurrentHP)
+
         this.setState(
-            () => {
-                return {
-                    textMessage: `${spellName} has done ${damage} damage!`
+            prevState => {
+                return { 
+                    playerCurrentHP, 
+                    textMessage: `${spellName} has done ${damage} damage!... now at ${playerCurrentHP.player2.currentHP}`
                 }
             }
         );
-    };
+        //console.log(this.state.player1.currentHP)
+    }
 
     render(){
         return(
