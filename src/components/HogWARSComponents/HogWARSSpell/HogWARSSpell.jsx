@@ -4,9 +4,13 @@ import { Component } from 'react'
 
 export default class HogWARSSpell extends Component {
     render(){
+        const name = this.props.spellName
+        const damage = this.props.spellDamage
         return(
             <>
-                <button>{this.props.spellName} ({this.props.spellDamage})</button>
+                <button onClick={ () => this.props.handleSpellClick(name, damage) } >
+                    {name} ({damage})
+                </button>
             </>
         )
     }
