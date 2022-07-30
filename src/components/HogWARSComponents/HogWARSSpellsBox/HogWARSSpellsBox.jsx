@@ -17,6 +17,7 @@ export default class HogWARSSpellsBox extends Component {
                                     index={index}
                                     spellName={this.props.spells[key].name}
                                     spellDamage={this.props.spells[key].damage}
+                                    handleSpellClick={this.props.handleSpellClick}
                                 />
                             )
                         })
