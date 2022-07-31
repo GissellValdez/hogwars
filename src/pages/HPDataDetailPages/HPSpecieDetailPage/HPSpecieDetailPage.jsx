@@ -1,5 +1,6 @@
 import * as harryPotterService from "../../../utilities/harry-potter-other-info/harry-potter-other-info-service"
 import HPSpecieDistinctionData from "../../../components/HPDataComponents/HPSpecieDistinctionDataTile/HPSpecieDistinctionDataTile"
+import HPSpecieRelativesData from "../../../components/HPDataComponents/HPSpecieRelativesDataTile/HPSpecieRelativesDataTile"
 import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 
@@ -28,11 +29,17 @@ export default function HPSpecieDetailPage({resource}){
                 <h3>Eyes: {potterData.eyes}</h3>
                 <h3>Hair: {potterData.hair}</h3>
                 <h3>height: {potterData.height}</h3>
-
+                
                 <h3>Distinctions: </h3>
                 {potterData.distinctions?.map((d, idx) =>
                 (
                     <HPSpecieDistinctionData specieDistinction={d} key={idx} />
+                ))}
+
+                <h3>Related Species:</h3>
+                {potterData.related_species?.map((d, idx) =>
+                (
+                    <HPSpecieRelativesData specieRelative={d} key={idx} />
                 ))}
 
             </div>
