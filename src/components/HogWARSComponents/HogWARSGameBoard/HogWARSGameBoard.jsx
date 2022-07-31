@@ -92,8 +92,8 @@ export default class HogWARSGameBoard extends Component {
         this.setState(
             prevState => {
                 return { 
-                    playerCurrentHP, 
-                    textMessage: `${spellName} has done ${damage} damage!... now at ${playerCurrentHP.player1.currentHP}`
+                    playerCurrentHP,
+                    textMessage: `${this.state.player2.name} used ${spellName} and dealt ${damage} damage!... They now have ${playerCurrentHP.player1.currentHP} HP`
                 }
             }
         );
@@ -114,7 +114,7 @@ export default class HogWARSGameBoard extends Component {
             prevState => {
                 return { 
                     opponentCurrentHP, 
-                    textMessage: `${spellName} has done ${damage} damage!... now at ${opponentCurrentHP.player2.currentHP}`
+                    textMessage: `${this.state.player1.name} used ${spellName} and dealt ${damage} damage!... They now have ${opponentCurrentHP.player2.currentHP} HP`
                 }
             },
             () => {
