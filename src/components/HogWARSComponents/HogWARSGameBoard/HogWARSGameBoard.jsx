@@ -79,6 +79,27 @@ export default class HogWARSGameBoard extends Component {
         }, 1000);
     };
 
+    opponentTurn = (spellName, damage) => {
+        damage = damage + Math.floor(Math.random() * 11);
+        // use attack to calculate enemy HP and adjust progress bar
+        
+        // this gets the current hp and reduces it by damage, to be set later in setState
+        var playerCurrentHP = {...this.state}
+        console.log(playerCurrentHP)
+        playerCurrentHP.player1.currentHP -= damage;
+        // console.log(playerCurrentHP)
+
+        this.setState(
+            prevState => {
+                return { 
+                    playerCurrentHP, 
+                    textMessage: `${spellName} has done ${damage} damage!... now at ${playerCurrentHP.player1.currentHP}`
+                }
+            }
+        );
+        //console.log(this.state.player1.currentHP)
+    }
+
     handleSpellClick = (spellName, damage) => {
         damage = damage + Math.floor(Math.random() * 11);
         // use attack to calculate enemy HP and adjust progress bar
