@@ -7,7 +7,6 @@ export default class HogWARSSpellsBox extends Component {
     render(){
         return(
             <>
-                <h5>Spell Box</h5>
                 <div className='spellcontainer'>
                     {
                         Object.keys(this.props.spells).map((key, index) => {
