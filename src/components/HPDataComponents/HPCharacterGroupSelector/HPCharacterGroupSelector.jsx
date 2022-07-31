@@ -24,7 +24,7 @@ export default function HPCharacterSearchBar(){
     return (
         <>
         <form value={potterCharacters} onSubmit={handleSubmit}>
-            <label>Enter a search word:</label>
+            <label>Please select a character group: </label>
             <select onChange={handleChange}>
                 <option value="characters">All Characters</option>
                 <option value="characters/students">Hogwarts - Students</option>
