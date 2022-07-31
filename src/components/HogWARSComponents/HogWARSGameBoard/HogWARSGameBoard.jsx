@@ -196,10 +196,26 @@ export default class HogWARSGameBoard extends Component {
         //console.log(this.state.player1.currentHP)
     }
 
+    handleResetGame = () => {
+        console.log("play again!!!");
+        var resetGame = {...this.state};
+        resetGame.player1.currentHP = resetGame.player1.maxHP;
+        resetGame.player2.currentHP = resetGame.player2.maxHP;
+        resetGame.gameOver = false;
+        resetGame.textMessage = "";
+        resetGame.playerDead=false;
+        resetGame.enemyDead=false;
+        this.setState({
+            resetGame
+        });
+        this.gameTextStart()
+    };
+
     render(){
         return(
             <>
                 <h1>Game Board</h1>
+                <button onClick={this.handleResetGame} >Click here to reset or play again</button>
                 <HogWARSOpponentBox opponent={this.state.player2} />
                 <HogWARSPlayerBox player={this.state.player1} />
                 <HogWARSSpellsBox spells={this.state.player1.spells} handleSpellClick={this.handleSpellClick}/>
