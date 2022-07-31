@@ -33,12 +33,12 @@ export default class HogWARSGameBoard extends Component {
             spells: [
                 { name:'Cruciatus Curse', damage: 75 },
                 { name:'Imperius Curse', damage: 50 },
-                { name:'Avada Kedavra', damage: 1000 },
+                { name:'Avada Kedavra', damage: 80 },
                 { name:'Nagini Bite', damage: 20 },
             ]
         },
         playerDead: false,
-        opponent: false,
+        opponentDead: false,
         gameOver: false,
         textMessage: ""
     }
@@ -80,24 +80,70 @@ export default class HogWARSGameBoard extends Component {
     };
 
     opponentTurn = (spellName, damage) => {
-        damage = damage + Math.floor(Math.random() * 11);
-        // use attack to calculate enemy HP and adjust progress bar
-        
-        // this gets the current hp and reduces it by damage, to be set later in setState
-        var playerCurrentHP = {...this.state}
-        console.log(playerCurrentHP)
-        playerCurrentHP.player1.currentHP -= damage;
-        // console.log(playerCurrentHP)
+            // if enemy is still alive, proceed with enemy turn
+            damage = damage + Math.floor(Math.random() * 11);
+            // use attack to calculate enemy HP and adjust progress bar
+            
+            // this gets the current hp and reduces it by damage, to be set later in setState
+            var playerCurrentHP = {...this.state}
+            console.log(playerCurrentHP)
 
-        this.setState(
-            prevState => {
-                return { 
-                    playerCurrentHP,
-                    textMessage: `${this.state.player2.name} used ${spellName} and dealt ${damage} damage!... They now have ${playerCurrentHP.player1.currentHP} HP`
+        // first, check if enemy fainted. End Game if they did.
+
+        var opponentCurrentHP = {...this.state}
+        if (opponentCurrentHP.player2.currentHP == 0) {
+                this.setState(
+                {
+                textMessageOne: `${this.state.enemyName} fainted.`,
+                textMessageTwo: `${this.state.playerName} wins!`,
+                enemyDead: true
+                },
+                () => {
+                setTimeout(() => {
+                    this.setState({
+                        gameOver: true
+                    });
+                }, 3000);
                 }
-            }
-        );
-        //console.log(this.state.player1.currentHP)
+            );
+        } else {
+            
+            if (playerCurrentHP.player1.currentHP - damage <= 0){
+                playerCurrentHP.player1.currentHP = 0;
+            } else playerCurrentHP.player1.currentHP -= damage;
+            // console.log(playerCurrentHP)
+            this.setState(
+                prevState => {
+                    return { 
+                        playerCurrentHP,
+                        textMessage: `${this.state.player2.name} used ${spellName} and dealt ${damage} damage!... You now have ${playerCurrentHP.player1.currentHP} HP`
+                    }
+                },
+                () => {
+                    setTimeout(() => {
+                        if (playerCurrentHP.player1.currentHP == 0) {
+                            this.setState(
+                                {
+                                    textMessage: `${playerCurrentHP.player1.name} has died... ${opponentCurrentHP.player2.name} wins the duel!`
+                                },
+                                () => {
+                                    setTimeout(() => {
+                                        this.setState({
+                                            gameOver: true
+                                        });
+                                    },3000);
+                                }
+                            )
+                        } else {
+                            this.setState({
+                                textMessage: "Please choose a spell to attack with..."
+                            });
+                        }
+                    }, 2000);
+                }
+            );
+            //console.log(this.state.player1.currentHP)
+        }
     }
 
     handleSpellClick = (spellName, damage) => {
@@ -107,7 +153,11 @@ export default class HogWARSGameBoard extends Component {
         // this gets the current hp and reduces it by damage, to be set later in setState
         var opponentCurrentHP = {...this.state}
         console.log(opponentCurrentHP)
-    opponentCurrentHP.player2.currentHP -= damage;
+
+        if (opponentCurrentHP.player2.currentHP - damage <= 0){
+            opponentCurrentHP.player2.currentHP = 0;
+        } else opponentCurrentHP.player2.currentHP -= damage;
+        
         // console.log(playerCurrentHP)
 
         this.setState(
