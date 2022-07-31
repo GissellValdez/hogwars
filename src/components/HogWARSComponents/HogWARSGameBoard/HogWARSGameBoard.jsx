@@ -16,12 +16,12 @@ export default class HogWARSGameBoard extends Component {
             opponentImg: 'https://i.ibb.co/bvVDzGW/harryoppimg.png',
             currentHP: 500,
             maxHP: 500,
-            spells: {
-                spellOne: { name:'Expecto Patronum', damage: 50 },
-                spellTwo: { name:'Expelliarmus', damage: 30 },
-                spellThree: { name:'Sectumsempra', damage: 75 },
-                spellFour: { name:'Stupify', damage: 45 },
-            }
+            spells: [
+                { name:'Expecto Patronum', damage: 50 },
+                { name:'Expelliarmus', damage: 30 },
+                { name:'Sectumsempra', damage: 75 },
+                { name:'Stupify', damage: 45 },
+            ]
         },
         player2: {
             name: 'Lord Voldemort',
@@ -30,12 +30,12 @@ export default class HogWARSGameBoard extends Component {
             opponentImg: 'https://i.ibb.co/gJMsqSq/voldemortoppimg.jpg',
             currentHP: 500,
             maxHP: 500,
-            spells: {
-                spellOne: { name:'Cruciatus Curse', damage: 75 },
-                spellTwo: { name:'Imperius Curse', damage: 50 },
-                spellThree: { name:'Avada Kedavra', damage: 1000 },
-                spellFour: null,
-            }
+            spells: [
+                { name:'Cruciatus Curse', damage: 75 },
+                { name:'Imperius Curse', damage: 50 },
+                { name:'Avada Kedavra', damage: 1000 },
+                { name:'Nagini Bite', damage: 20 },
+            ]
         },
         playerDead: false,
         opponent: false,
@@ -116,6 +116,31 @@ export default class HogWARSGameBoard extends Component {
                     opponentCurrentHP, 
                     textMessage: `${spellName} has done ${damage} damage!... now at ${opponentCurrentHP.player2.currentHP}`
                 }
+            },
+            () => {
+                setTimeout(() => {
+                    let enemySpellIndex = Math.floor(Math.random() * 4);
+
+                    // empty now but will be set in the next map
+                    var enemySpellName
+                    var enemySpellDamage
+
+                    // eslint-disable-next-line array-callback-return
+                    Object.keys(this.state.player2.spells).map((key, index) => {
+                        // eslint-disable-next-line eqeqeq
+                        if (key == enemySpellIndex){
+                            enemySpellName = this.state.player2.spells[key].name
+                                
+                            enemySpellDamage = this.state.player2.spells[key].damage
+                                                            
+                            }
+                    })
+
+                    console.log(enemySpellIndex)
+                    console.log(`${enemySpellName}...${enemySpellDamage}`)
+
+                    this.opponentTurn(enemySpellName,enemySpellDamage)
+                }, 3000);
             }
         );
         //console.log(this.state.player1.currentHP)
