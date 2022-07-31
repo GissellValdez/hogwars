@@ -1,8 +1,9 @@
 /* CSS file for HogWARS game board */
 .spellcontainer {
 width:22%;
-height:400px;
+height:475px;
 text-align: center;
+margin-top: 60px;
 }
 .avatar {
     width:500px;
@@ -29,7 +30,7 @@ text-align: center;
 
 .opponentAvatar {
     margin-left:350px;
-    top:50px;
+    margin-top: -120px;
 }
 .opponentHealthBox {
     background-color: white;
@@ -54,6 +55,6 @@ text-align: center;
     padding: 5x;
     letter-spacing: -1px;
     inline-size: 300px;
-    margin-top: -400px;
+    margin-top: -450px;
     margin-left: 400px;
 }
