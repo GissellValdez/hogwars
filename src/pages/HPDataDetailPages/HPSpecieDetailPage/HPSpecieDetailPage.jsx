@@ -28,8 +28,8 @@ export default function HPSpecieDetailPage({resource}){
                 <h3>Mortality: {potterData.mortality}</h3>
                 <h3>Eyes: {potterData.eyes}</h3>
                 <h3>Hair: {potterData.hair}</h3>
-                <h3>height: {potterData.height}</h3>
-                
+                <h3>Height: {potterData.height}</h3>
+
                 <h3>Distinctions: </h3>
                 {potterData.distinctions?.map((d, idx) =>
                 (
