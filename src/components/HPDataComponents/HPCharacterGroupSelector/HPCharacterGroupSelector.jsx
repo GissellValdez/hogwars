@@ -27,8 +27,8 @@ export default function HPCharacterSearchBar(){
             <label>Enter a search word:</label>
             <select onChange={handleChange}>
                 <option value="characters">All Characters</option>
-                <option value="characters/students">Students</option>
-                <option value="characters/staff">Staff</option>
+                <option value="characters/students">Hogwarts - Students</option>
+                <option value="characters/staff">Hogwarts - Staff</option>
                 <option value="characters/house/gryffindor">Characters from Gryffindor</option>
                 <option value="characters/house/slytherin">Characters from Slytherin</option>
                 <option value="characters/house/hufflepuff">Characters from Hufflepuff</option>
