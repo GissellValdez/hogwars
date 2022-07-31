@@ -105,16 +105,16 @@ export default class HogWARSGameBoard extends Component {
         // use attack to calculate enemy HP and adjust progress bar
         
         // this gets the current hp and reduces it by damage, to be set later in setState
-        var playerCurrentHP = {...this.state}
-        console.log(playerCurrentHP)
-        playerCurrentHP.player2.currentHP -= damage;
+        var opponentCurrentHP = {...this.state}
+        console.log(opponentCurrentHP)
+    opponentCurrentHP.player2.currentHP -= damage;
         // console.log(playerCurrentHP)
 
         this.setState(
             prevState => {
                 return { 
-                    playerCurrentHP, 
-                    textMessage: `${spellName} has done ${damage} damage!... now at ${playerCurrentHP.player2.currentHP}`
+                    opponentCurrentHP, 
+                    textMessage: `${spellName} has done ${damage} damage!... now at ${opponentCurrentHP.player2.currentHP}`
                 }
             }
         );
