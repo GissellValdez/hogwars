@@ -214,12 +214,13 @@ export default class HogWARSGameBoard extends Component {
     render(){
         return(
             <>
-                <h1>Game Board</h1>
-                <button onClick={this.handleResetGame} >Click here to reset or play again</button>
-                <HogWARSOpponentBox opponent={this.state.player2} />
-                <HogWARSPlayerBox player={this.state.player1} />
-                <HogWARSSpellsBox spells={this.state.player1.spells} handleSpellClick={this.handleSpellClick}/>
-                <HogWARSTextBox gameText={this.state.textMessage} />
+                <div className='game-board'>
+                    <button onClick={this.handleResetGame} >Click here to reset or play again</button>
+                    <HogWARSOpponentBox opponent={this.state.player2} />
+                    <HogWARSPlayerBox player={this.state.player1} />
+                    <HogWARSSpellsBox spells={this.state.player1.spells} handleSpellClick={this.handleSpellClick}/>
+                    <HogWARSTextBox gameText={this.state.textMessage} />    
+                </div>
             </>
         )
     }
