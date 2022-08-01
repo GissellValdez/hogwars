@@ -176,3 +176,7 @@ a {
   font-size: 40px;
   text-decoration: none;
 }
+
+img {
+  mix-blend-mode: multiply;
+}
