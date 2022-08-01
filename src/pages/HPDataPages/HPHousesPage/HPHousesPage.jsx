@@ -19,6 +19,8 @@ export default function HPResourcePage({resource}){
 
     return(
         <>
+            <p>Below are are the houses all students are sorted in to in their first year at Hogwarts.</p>
+            <p>Click on any of the houses to get more information on the house you might be sorted in to when you get your Hogwarts letter!</p>
             <div className="house-grid">
                 {potterDataList?.map((d, idx) =>
                 (
