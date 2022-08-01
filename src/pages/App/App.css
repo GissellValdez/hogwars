@@ -150,7 +150,7 @@ body {
 /* Lines above this line are for home page */
 
 /* Lines below this line are for books page... adding grid */
-.books-grid {
+.books-grid, .house-grid {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-items: center;
