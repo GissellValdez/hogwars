@@ -12,6 +12,7 @@ import HPSpecieDetailPage from "../HPDataDetailPages/HPSpecieDetailPage/HPSpecie
 import HPWandsPage from "../HPDataPages/HPWandsPage/HPWandsPage.jsx";
 import HPWandDetailPage from "../HPDataDetailPages/HPWandDetailPage/HPWandDetailPage.jsx";
 import HogWARSGamePage from "../HogWARSPages/HogWARSGamePage/HogWARSGamePage.jsx";
+import HPHomePage from "../HPHomePage/HPHomePage"
 import { useState } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
@@ -26,6 +27,7 @@ export default function App() {
       <>
         <NavBar user={user} setUser={setUser} />
         <Routes>
+          <Route path="/" element={<HPHomePage />} />
           <Route path="/characters" element={<HPCharactersPage />} />
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
           <Route path="/books/:id" element={<HPBookDetailPage resource="books/"/>} />
