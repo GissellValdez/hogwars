@@ -18,7 +18,7 @@ export default function HPBooksPage({resource}){
 
     return(
         <>
-            <div>
+            <div className="books-grid">
                 {potterDataList?.map((d, idx) =>
                 (
                     <HPBookDataTile resourceData={d} key={idx} />
