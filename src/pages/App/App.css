@@ -180,3 +180,18 @@ a {
 img {
   mix-blend-mode: multiply;
 }
+
+.spell-button {
+  font-family: 'HarryPotter';
+  background-color:gold;
+  border-color: black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin-left: 20%;
+}

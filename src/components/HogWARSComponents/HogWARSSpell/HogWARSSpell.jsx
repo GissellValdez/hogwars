@@ -8,7 +8,9 @@ export default class HogWARSSpell extends Component {
         const damage = this.props.spellDamage
         return(
             <>
-                <button onClick={ () => this.props.handleSpellClick(name, damage) } >
+                <button 
+                    className='spell-button'
+                    onClick={ () => this.props.handleSpellClick(name, damage) } >
                     {name} ({damage})
                 </button>
             </>
