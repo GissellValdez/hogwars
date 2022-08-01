@@ -165,9 +165,14 @@ body {
 /* Lines above this lins are for the books, house, specie, and wand pages */
 
 /* add the harry potter font to all elements that have text */
-a, p, h1, h2, h3, h4, label {
+p, h1, h2, h3, h4, label {font-family: 'HarryPotter';
+  color: black;
+  font-size: 20px;
+}
+
+a {
   font-family: 'HarryPotter';
   color: black;
-  font-size: 18px;
-   text-decoration: none;
+  font-size: 40px;
+  text-decoration: none;
 }
