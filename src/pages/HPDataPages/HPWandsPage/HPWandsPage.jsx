@@ -18,6 +18,9 @@ export default function HPWandsPage({resource}){
 
     return(
         <>
+            <p>Get to know the wand of your favorite characters!</p>
+            <p>Click on any of the wands below!</p>
+            <br />
             <div className="wand-grid">
                 {potterDataList?.map((d, idx) =>
                 (
