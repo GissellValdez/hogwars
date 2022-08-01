@@ -39,6 +39,13 @@
 
 /* Lines above this link are default */
 
+/* Below this line is code for the custom Harry Potter font */
+@font-face {
+  font-family: 'HarryPotter';
+  src: url('/src/HARRP___.TTF');
+}
+/* Above this line is code for the custom Harry Potter font */
+
 /* Lines below this line are for home page */
 body {
   background: #ddd;
@@ -155,3 +162,4 @@ body {
   grid-template-columns: repeat(4, auto);
   justify-items: center;
 }
+/* Lines above this lins are for the books, house, specie, and wand pages */
