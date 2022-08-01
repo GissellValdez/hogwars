@@ -18,6 +18,9 @@ export default function HPBooksPage({resource}){
 
     return(
         <>
+            <p>The first Harry Potter book, Harry Potter and the Philosopher’s Stone, was published by Bloomsbury in 1997 to immediate popular and critical acclaim. Six further best-selling books, three companion books, a playscript and two screenplays have since followed. The Harry Potter books have been translated into over 80 languages, won multiple awards, and sold more than 500 million copies worldwide, becoming the best-selling book series in history...</p>
+            <p>Please click on any one of the books below for extra info on that book!</p>
+
             <div className="books-grid">
                 {potterDataList?.map((d, idx) =>
                 (
