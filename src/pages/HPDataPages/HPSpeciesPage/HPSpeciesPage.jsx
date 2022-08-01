@@ -18,6 +18,8 @@ export default function HPResourcePage({resource}){
 
     return(
         <>
+            <p>Below is a list of species/creatures from the Harry Potter series.</p>
+            <p>Click on any of the species to see more information about them...</p>
             <div className="specie-grid">
                 {potterDataList?.map((d, idx) =>
                 (
