@@ -18,7 +18,7 @@ export default function HPResourcePage({resource}){
 
     return(
         <>
-            <div>
+            <div className="specie-grid">
                 {potterDataList?.map((d, idx) =>
                 (
                     <HPSpecieDataTile resourceData={d} key={idx} />
