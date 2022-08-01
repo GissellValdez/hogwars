@@ -15,7 +15,7 @@ export default function NavBar({user}, {setUser}) {
       &nbsp; | &nbsp;
       <Link to="/houses">Houses</Link>
       &nbsp; | &nbsp;
-      <Link to="/species">Species</Link>
+      <Link to="/species">Creatures</Link>
       &nbsp; | &nbsp;
       <Link to="/wands">Wands</Link>
       &nbsp; | &nbsp;
