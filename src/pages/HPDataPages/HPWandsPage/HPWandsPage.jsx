@@ -18,7 +18,7 @@ export default function HPWandsPage({resource}){
 
     return(
         <>
-            <div>
+            <div className="wand-grid">
                 {potterDataList?.map((d, idx) =>
                 (
                     <HPWandDataTile resourceData={d} key={idx} />
