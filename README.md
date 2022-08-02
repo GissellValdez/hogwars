@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+Welcome to HogWARS: Wizard World War !
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application was made to display tons of information from the wizarding world of Harry Potter, and a game where you can duel with any character.
 
-## Available Scripts
+Link to the HogWARS Trello board: https://trello.com/b/SDFln8mx/hogwars-wizard-world-war
 
-In the project directory, you can run:
+Technologies used:
+- MongoDB
+- Express
+- React
+- NodeJS
+- CSS
+- To create the custom logo: https://fontmeme.com/harry-potter-font/
+- To create the intro image: https://pinetools.com/overlay-images 
 
-### `npm start`
+APIs:
+- Legacy API: The RESTful Harry Potter API
+  - This is the main API used for Harry Potter information, including characters, books, houses, wands, and more!
+  - For more information, you can visit https://www.theboywholivedapi.fun/.
+- HP-API!
+  - This API had categorized information on characters
+  - For more information, you can visit http://hp-api.herokuapp.com/.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Models:
+- Playable Characters
+- Spells
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ERD:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Wire Frames:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
