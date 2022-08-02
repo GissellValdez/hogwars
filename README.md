@@ -4,7 +4,17 @@
 
 Welcome to HogWARS: Wizard World War !
 
-This application was made to display tons of information from the wizarding world of Harry Potter, and a game where you can duel with any character.
+This application was made to display tons of information from the wizarding world of Harry Potter, and a  pokemon style game where you can duel with any character.
+
+User stories:
+- The app will starsts off with a have a sign up/log in page qwhere users can create an account.
+- A nav bar on the top of the page and below the logo will display links to:
+-   charecter page - HP characters will be listed along with info on them.
+-   year book link : pictures of many of the charcters.
+-   Houses - info for all the houses
+-  Creatures- are listed with info on them.
+-  Wands - list of wands and info on them.
+-  Hogwars - Pokemon style dueling game.
 
 Link to the HogWARS Trello board: https://trello.com/b/SDFln8mx/hogwars-wizard-world-war
 
