@@ -17,6 +17,8 @@ export default function NavBar({user}, {setUser}) {
       <nav>
         <Link to="/characters">Characters</Link>
         &nbsp; | &nbsp;
+        <Link to="/yearbook">Yearbook</Link>
+        &nbsp; | &nbsp;
         <Link to="/books">Books</Link>
         &nbsp; | &nbsp;
         <Link to="/houses">Houses</Link>
