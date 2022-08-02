@@ -7,5 +7,7 @@ const usersCtrl = require('../../controllers/api/users');
 // POST /api/users
 router.post('/', usersCtrl.create);
 router.post('/login', usersCtrl.login)
+router.post('/update', usersCtrl.update)
+router.post('/delete', usersCtrl.deleteUser)
 
 module.exports = router;
