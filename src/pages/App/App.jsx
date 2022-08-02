@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from "../../components/NavBar/NavBar.jsx";
 import AuthPage from "../AuthPage/AuthPage.jsx";
 import HPCharactersPage from "../HPDataPages/HPCharactersPage/HPCharactersPage.jsx";
+import HPCharacterDetailPage from "../HPDataDetailPages/HPCharacterDetailPage/HPCharacterDetailPage.jsx";
 import HPYearbookPage from "../HPDataPages/HPYearbookPage/HPYearbookPage.jsx";
 import HPBooksPage from "../HPDataPages/HPBooksPage/HPBooksPage.jsx";
 import HPBookDetailPage from "../HPDataDetailPages/HPBookDetailPage/HPBookDetailPage.jsx";
@@ -30,7 +31,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HPHomePage />} />
           <Route path="/characters" element={<HPCharactersPage resource="characters"/>} />
-          <Route path="/characters/:id" element={<HPCharactersPage resource="characters/"/>} />
+          <Route path="/characters/:id" element={<HPCharacterDetailPage resource="characters/"/>} />
           <Route path="/yearbook" element={<HPYearbookPage />} />
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
           <Route path="/books/:id" element={<HPBookDetailPage resource="books/"/>} />
