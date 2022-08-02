@@ -9,6 +9,11 @@ export default function NavBar({user}, {setUser}) {
   }
   return (
     <nav>
+      
+      <Link to="/" className='clickable-banner'>
+        <img src="https://fontmeme.com/permalink/220802/a9ddefe7df5a8a231b60c1a33ae23e37.png" alt="harry-potter-font" border="0" />
+      </Link>
+      &nbsp; &nbsp;
       <Link to="/characters">Characters</Link>
       &nbsp; | &nbsp;
       <Link to="/books">Books</Link>
