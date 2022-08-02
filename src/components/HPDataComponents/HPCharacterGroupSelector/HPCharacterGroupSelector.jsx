@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import HPCharacterList from "../HPCharacterList/HPCharacterList"
+import HPYearbookCharacterList from "../HPYearbookCharacterList/HPYearbookCharacterList"
 import * as potterCharacterAPI from "../../../utilities/harry-potter-characters/harry-potter-characters-service"
 
 export default function HPCharacterSearchBar(){
@@ -37,7 +37,7 @@ export default function HPCharacterSearchBar(){
             <button type="submit">Submit</button>
         </form>
 
-        <HPCharacterList potterCharacters={potterCharacters} />
+        <HPYearbookCharacterList potterCharacters={potterCharacters} />
         </>
     );
 }
