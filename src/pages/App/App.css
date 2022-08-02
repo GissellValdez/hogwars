@@ -167,13 +167,13 @@ body {
 /* add the harry potter font to all elements that have text */
 p, h1, h2, h3, h4, label {font-family: 'HarryPotter';
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 a {
   font-family: 'HarryPotter';
   color: black;
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: none;
 }
 
