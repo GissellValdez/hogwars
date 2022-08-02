@@ -8,28 +8,30 @@ export default function NavBar({user}, {setUser}) {
     setUser(null)
   }
   return (
-    <nav>
-      
-      <Link to="/" className='clickable-banner'>
-        <img src="https://fontmeme.com/permalink/220802/a9ddefe7df5a8a231b60c1a33ae23e37.png" alt="harry-potter-font" border="0" />
-      </Link>
-      &nbsp; &nbsp;
-      <Link to="/characters">Characters</Link>
-      &nbsp; | &nbsp;
-      <Link to="/books">Books</Link>
-      &nbsp; | &nbsp;
-      <Link to="/houses">Houses</Link>
-      &nbsp; | &nbsp;
-      <Link to="/species">Creatures</Link>
-      &nbsp; | &nbsp;
-      <Link to="/wands">Wands</Link>
-      &nbsp; | &nbsp;
-      <Link to="/hogwars">HogWARS</Link>
-      &nbsp; | &nbsp;
-      <Link to="/" onClick={handleLogOut}>Logout</Link>
-      <br />
-      <br />
-      <br />
-    </nav>
+    <>
+      <div>
+        <Link to="/" className='clickable-banner'>
+          <img src="https://fontmeme.com/permalink/220802/58fe3af4cfdd9d03c56596b7d44e627c.png" alt="harry-potter-font" border="0" />
+        </Link>
+      </div>
+      <nav>
+        <Link to="/characters">Characters</Link>
+        &nbsp; | &nbsp;
+        <Link to="/books">Books</Link>
+        &nbsp; | &nbsp;
+        <Link to="/houses">Houses</Link>
+        &nbsp; | &nbsp;
+        <Link to="/species">Creatures</Link>
+        &nbsp; | &nbsp;
+        <Link to="/wands">Wands</Link>
+        &nbsp; | &nbsp;
+        <Link to="/hogwars">HogWARS</Link>
+        &nbsp; | &nbsp;
+        <Link to="/" onClick={handleLogOut}>Logout</Link>
+        <br />
+        <br />
+        <br />
+      </nav>
+    </>
   );
 }
