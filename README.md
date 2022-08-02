@@ -1,3 +1,7 @@
+![image](https://user-images.githubusercontent.com/101136389/182425590-562adf64-c656-425a-928c-eb3ffda0702b.png)
+
+
+
 Welcome to HogWARS: Wizard World War !
 
 This application was made to display tons of information from the wizarding world of Harry Potter, and a game where you can duel with any character.
