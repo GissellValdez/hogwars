@@ -5,9 +5,11 @@ let jwt = require('jsonwebtoken');
 let bcrypt = require('bcrypt')
 
 module.exports = {
-  create,
-  login
-};
+	create,
+	login,
+  update,
+  deleteUser
+}
 
 // controllers/api/users.js
 
