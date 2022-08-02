@@ -29,7 +29,8 @@ export default function App() {
         <NavBar user={user} setUser={setUser} />
         <Routes>
           <Route path="/" element={<HPHomePage />} />
-          <Route path="/characters" element={<HPCharactersPage resource="books"/>} />
+          <Route path="/characters" element={<HPCharactersPage resource="characters"/>} />
+          <Route path="/characters/:id" element={<HPCharactersPage resource="characters/"/>} />
           <Route path="/yearbook" element={<HPYearbookPage />} />
           <Route path="/books" element={<HPBooksPage resource="books"/>} />
           <Route path="/books/:id" element={<HPBookDetailPage resource="books/"/>} />
