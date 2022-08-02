@@ -17,7 +17,7 @@ import HogWARSGamePage from "../HogWARSPages/HogWARSGamePage/HogWARSGamePage.jsx
 import HPHomePage from "../HPHomePage/HPHomePage"
 import MyAccount from "../MyAccount/MyAccount"
 import { useState } from "react";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 
 export default function App() {
@@ -43,7 +43,8 @@ export default function App() {
           <Route path="/wands" element={<HPWandsPage resource="wands"/>} />
           <Route path="/wands/:id" element={<HPWandDetailPage resource="wands/"/>} />
           <Route path="/hogwars" element={<HogWARSGamePage />} />
-          <Route path="/myaccount" element={<MyAccount />} />
+					<Route path='/myaccount' element={<MyAccount user={user}/>} />
+          <Route path='/*' element={<Navigate to='/myaccount' />}/>
         </Routes>
       </>
        : 
