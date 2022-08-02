@@ -44,3 +44,15 @@ export function getUser() {
   // If there's a token, return the user in the payload, otherwise return null
   return token ? JSON.parse(atob(token.split('.')[1])).user : null;
 }
+
+export async function updateUser(newUser) {
+	localStorage.removeItem('token')
+	const token = await usersAPI.updateUser(newUser)
+	localStorage.setItem('token', token)
+	return getUser()
+}
+
+export async function deleteUser(user) {
+	usersAPI.deleteUser(user)
+	localStorage.removeItem('token')
+}
