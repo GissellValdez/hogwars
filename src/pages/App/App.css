@@ -47,10 +47,10 @@
 /* Above this line is code for the custom Harry Potter font */
 
 /* Lines below this line are for home page */
-body {
-  background: #ddd;
-  /* background-image: url("https://i.ibb.co/tZB5PZC/stars-background.jpg");
-  background-size: cover; */
+html {
+  /* background: rgb(171, 14, 14); */
+  background-image: url("https://i.ibb.co/jL3zNg1/stars-background.jpg");
+  background-size: cover;
 }
 
 
@@ -66,20 +66,20 @@ body {
 
 /* add the harry potter font to all elements that have text */
 p, h1, h2, h3, h4, label {font-family: 'HarryPotter';
-  color: black;
+  color: rgb(216, 185, 4);
   font-size: 18px;
 }
 
 a {
   font-family: 'HarryPotter';
-  color: black;
+  color: rgb(216, 185, 4);
   font-size: 30px;
   text-decoration: none;
 }
 
-img {
+/* img {
   mix-blend-mode: multiply;
-}
+} */
 
 .spell-button {
   font-family: 'HarryPotter';
@@ -90,12 +90,74 @@ img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 20px;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 .intro-logo {
   margin-top: -75%;
+}
+
+/* CSS file for HogWARS game board */
+.spellcontainer {
+width:22%;
+height:475px;
+text-align: center;
+margin-top: 5%;
+}
+.avatar {
+    width:10%;
+    height: 280px;
+    inline-size: 150px;
+    mix-blend-mode: normal;
+}
+.playerHealthBox {
+    background-color: white;
+    width: -75%;
+    height: auto;
+    border: 5px solid green;
+    border-radius: 14px 0px 14px 0px;
+    padding: 5x;
+    letter-spacing: -1px;
+    inline-size: 300px;
+    margin-left: 400px;
+}
+.playerBox {
+    inline-size:0;
+    position:relative;
+    left: 0px;
+    top: 55px;
+}
+
+.opponentAvatar {
+    margin-left:350px;
+    margin-top: -120px;
+}
+.opponentHealthBox {
+    background-color: white;
+    height: auto;
+    border: 5px solid green;
+    border-radius: 14px 0px 14px 0px;
+    padding: 5x;
+    letter-spacing: -1px;
+    inline-size: 300px;
+    margin-left: 0px;
+}
+.opponentBox {
+    inline-size:0;
+    position:relative;
+    left: 200px;
+}
+.text-box {
+    background-color: lightskyblue;
+    height: 140px;
+    border: 5px solid green;
+    border-radius: 14px 0px 14px 0px;
+    padding: 5x;
+    letter-spacing: -1px;
+    inline-size: 300px;
+    margin-top: -450px;
+    margin-left: 400px;
 }

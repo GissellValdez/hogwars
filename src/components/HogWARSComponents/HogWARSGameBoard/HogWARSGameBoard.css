@@ -1,14 +1,15 @@
 /* CSS file for HogWARS game board */
-.spellcontainer {
+/* .spellcontainer {
 width:22%;
 height:475px;
 text-align: center;
-margin-top: 60px;
+margin-top: 5%;
 }
 .avatar {
-    width:500px;
+    width:10%;
     height: 280px;
     inline-size: 150px;
+    mix-blend-mode: normal;
 }
 .playerHealthBox {
     background-color: white;
@@ -57,4 +58,4 @@ margin-top: 60px;
     inline-size: 300px;
     margin-top: -450px;
     margin-left: 400px;
-}
+} */
